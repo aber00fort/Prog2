@@ -125,8 +125,7 @@ void removePJ(vector<personPJ> &empresas, int indice)
 void names(const vector<personPF> &pessoas, const vector<personPJ> &empresas)
 {
     int i;
-    cout << "Names in Ascendind Order:" << endl; //isso aqui não printa na ordem alfabetica... faz um bubble sort ai que resolve
-                                                 // se n sabe o que é, pesquisa no google lllkkkk
+    cout << "Names in Ascendind Order:" << endl;
     vector<string> nomes;
     for (i = 0; i < pessoas.size(); i++)
         nomes.push_back(pessoas[i].name);
