@@ -39,7 +39,7 @@ void loadDb(string path, vector<personPF> &pessoas, vector<personPJ> &empresas){
 }
 //Tá funfando?
 void saveDb(string path, const vector<personPF> &pessoas, const vector<personPJ> &empresas){
-    ofstream write(path);
+    ofstream arquivo(path);
     //string coisas;
     int i;
     /*while(getline(reader, coisas)){
@@ -63,25 +63,25 @@ void saveDb(string path, const vector<personPF> &pessoas, const vector<personPJ>
     }*/
     if(pessoas.size() > -1){
         for(i = 0; i < pessoas.size(); i++){
-            write << "1" << endl;
-            write << pessoas[i].name << endl;
-            write << pessoas[i].nameMae << endl;
-            write << pessoas[i].cpf << endl;
-            write << pessoas[i].endereco << endl;
-            write << pessoas[i].telefone << endl;
+            arquivo << "1" << endl;
+            arquivo << pessoas[i].name << endl;
+            arquivo << pessoas[i].nameMae << endl;
+            arquivo << pessoas[i].cpf << endl;
+            arquivo << pessoas[i].endereco << endl;
+            arquivo << pessoas[i].telefone << endl;
         }
     }
     if(empresas.size() > 0){
         for(i = 0; i < empresas.size(); i++){
-            write << "2" << endl;
-            write << empresas[i].razaoSocial << endl;
-            write << empresas[i].cnpj << endl;
-            write << empresas[i].endereco << endl;
-            write << empresas[i].telefone << endl;
-            write << empresas[i].capitalSocial << endl;
+            arquivo << "2" << endl;
+            arquivo << empresas[i].razaoSocial << endl;
+            arquivo << empresas[i].cnpj << endl;
+            arquivo << empresas[i].endereco << endl;
+            arquivo << empresas[i].telefone << endl;
+            arquivo << empresas[i].capitalSocial << endl;
         }
     }
-    write.close();
+    arquivo.close();
 }
 //Tá funfando?
 void addPF(vector<personPF> &pessoas){
