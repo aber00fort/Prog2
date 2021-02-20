@@ -27,7 +27,7 @@ void loadDb(string path, vector<personPF> &pessoas, vector<personPJ> &empresas)
             getline(filereader, pessoa.nameMae);
             getline(filereader, pessoa.cpf);
             getline(filereader, pessoa.endereco);
-            filereader >> pessoa.telefone;
+            getline(filereader, pessoa.telefone);
             pessoas.push_back(pessoa);
         }
         if (tmp == "2") //só p ter ctz q n vai quebrar
@@ -86,7 +86,7 @@ void addPF(vector<personPF> &pessoas)
     getline(cin, individuo.endereco);
     if (NCOUT)
         cout << "Insira o telefone: ";
-    cin >> individuo.telefone;
+    getline(cin, individuo.telefone);
     pessoas.push_back(individuo);
 }
 
