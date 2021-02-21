@@ -8,8 +8,7 @@
 
 using namespace std;
 
-struct personPF
-{
+struct personPF{
     string name;
     string nameMae;
     string cpf;
@@ -17,8 +16,7 @@ struct personPF
     string telefone;
 };
 
-struct personPJ
-{
+struct personPJ{
     string razaoSocial;
     string cnpj;
     string endereco;
